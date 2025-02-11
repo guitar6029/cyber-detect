@@ -15,7 +15,7 @@
 	};
 </script>
 
-<form onsubmit={handleSubmit} class="flex flex-col gap-4">
+<form onsubmit={handleSubmit} class="flex flex-col gap-4 mt-10">
 	<label for="name" class="text-2xl">Name</label>
 	<input
 		type="text"
@@ -36,9 +36,10 @@
 	/>
 	<label for="message" class="text-2xl">Message</label>
 	<textarea
-		class="rounded-lg border-2 p-2"
+		class="rounded-lg border-2 p-2 max-h-[7rem]"
 		name="message"
 		id="message"
+		maxlength="500"
 		bind:value={userForm.message}
 	></textarea>
 	<button
