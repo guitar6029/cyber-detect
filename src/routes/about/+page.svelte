@@ -19,8 +19,8 @@
 
 </script>
 
-<div class="flex flex-col gap-5 p-3">
-    <h1 class="text-4xl">About Us</h1>
+<div class="flex flex-col gap-5 p-4 slide-in">
+    <h1 class="text-4xl text-white font-bold">About Us</h1>
     <p>At Cyber Detect, we protect your digital assets from evolving cyber threats. Our expert team is dedicated to providing cutting-edge solutions and fast response times to keep you secure.</p>
     <ul class="list-disc list-inside">
         {#each commitment as { keyPoint, description}}
@@ -28,3 +28,9 @@
         {/each}
     </ul>
 </div>
+
+
+
+<style lang="postcss">
+  @import 'src/global.css';
+</style>

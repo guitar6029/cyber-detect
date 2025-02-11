@@ -56,16 +56,16 @@
         <button class="hover:bg-orange-400 transition duration-300 ease-in-out rounded-lg bg-orange-500 p-4 text-white w-[10rem] cursor-pointer"><a href="/services">Learn More</a></button>
 	</section>
 
-	<section use:intersect={options} on:intersect={handleIntersect} class="flex flex-col gap-3 rounded-lg border-2 border-orange-500 p-4">
+	<section use:intersect={options} onintersect={handleIntersect} class="flex flex-col gap-3 rounded-lg border-2 border-orange-500 p-4">
 		<h1 class="text-4xl text-white font-bold">Why Choose Us ?</h1>
 		<p>
 			Our comprehensive suite of services is designed to address your unique security needs. From
 			threat intelligence to security awareness training, we have you covered.
 		</p>
-		<div class="flex sm:flex-col lg:flex-row lg:flex-wrap justify-center gap-5 p-3">
+		<div class="sm:flex flex-col lg:flex-row lg:flex-wrap justify-center sm:gap-10 lg:gap-5 p-3">
 			{#each reasons as reason}
 				<div
-					class="bg-neutral-900 hover:bg-neutral-700 transition duration-300 ease-in-out lg:w-[15rem] lg:h-[10rem] flex  flex-row items-center justify-center gap-4 rounded-lg sm:w-[100%] p-5"
+					class="bg-neutral-900 hover:bg-neutral-700 transition duration-300 ease-in-out lg:w-[35rem] lg:h-[10rem] flex  flex-row items-center justify-center gap-4 rounded-lg sm:w-[100%] p-5"
 				>
 					<img src={logo} alt="security" class="h-[5rem] w-[5rem] rounded-full" />
 					<span class="flex-1 text-white sm:text-sm">{reason}</span>
@@ -105,7 +105,7 @@
 
 <style lang="postcss">
     .slide-in {
-        animation: slide-in 1s ease-in-out .5s;
+        animation: slide-in 1s ease-in-out .1s;
     }
 
     @keyframes slide-in {

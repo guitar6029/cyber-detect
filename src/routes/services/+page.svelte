@@ -49,8 +49,8 @@
 	let selectedService = $state(services[0]);
 </script>
 
-<div class="relative flex min-h-screen flex-col gap-2 p-3">
-	<h1 class="text-4xl">Our Services</h1>
+<div class="relative flex flex-col gap-2 p-4 slide-in">
+	<h1 class="text-4xl text-white font-bold">Our Services</h1>
 	<div class="grid xl:grid-cols-2 sm:grid-cols-1 gap-3">
 		<div class="col-span-1 flex flex-col items-start gap-3">
 			{#each services as service}
@@ -71,3 +71,7 @@
 		</div>
 	</div>
 </div>
+
+<style lang="postcss">
+    @import 'src/global.css';
+</style>
