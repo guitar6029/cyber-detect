@@ -71,7 +71,7 @@
 	};
 </script>
 
-<div class="sticky top-0 z-10 flex flex-row items-center gap-4 bg-neutral-900 p-3">
+<div class="sticky w-[100vw] top-0 z-10 flex flex-row items-center gap-4 bg-neutral-900 p-3">
 	<img
 		src={logo}
 		alt="Cyber Detect Logo"

@@ -6,6 +6,8 @@ html {
     padding: 0;
     background-color: #080808;
     color: rgb(138, 131, 131);
+    max-width: 1440px;
+    min-width: 640px;
 }
 body{
     overflow-x: hidden;
