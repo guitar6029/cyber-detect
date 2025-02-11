@@ -1,11 +1,7 @@
 <script lang="ts">
 	import { LockKeyholeOpen, ShieldCheck, Cable, Focus } from 'lucide-svelte';
 	import Slider from '$lib/components/Slider.svelte';
-	let userForm: { name: string; email: string; message: string } = $state({
-		name: '',
-		email: '',
-		message: ''
-	});
+	import Form from '$lib/components/Form.svelte';
 
 	const fintechCompanies: String[] = [
 		'QuantumPay Solutions',
@@ -39,11 +35,8 @@
 		}
 	];
 
-	const handleSubmit = (e: Event) => {
-		e.preventDefault();
-		console.log('form details : ', userForm);
-		//clear the form
-		userForm = { name: '', email: '', message: '' };
+	const handleSubmit = (formDetails: { name: string; email: string; message: string }) => {
+		console.log('form details ::::', formDetails);
 	};
 </script>
 
@@ -83,7 +76,7 @@
 		<div class="flex-col justify-center p-3 sm:flex sm:gap-10 lg:flex-row lg:flex-wrap lg:gap-5">
 			{#each reasons as reason}
 				<div
-					class="group flex flex-row items-center justify-center gap-4 rounded-lg bg-neutral-900 p-5 transition duration-300 ease-in-out hover:bg-neutral-700 sm:w-[100%] lg:h-[10rem] lg:w-[35rem]"
+					class="group flex flex-row items-center justify-center rounded-lg bg-neutral-900 p-5 transition duration-300 ease-in-out hover:bg-neutral-700 sm:w-[100%] sm:gap-10 lg:h-[10rem] lg:w-[35rem] lg:gap-4"
 				>
 					<reason.icon
 						size="5rem"
@@ -95,8 +88,8 @@
 		</div>
 	</section>
 
-	<!-- our sponsors -->
-	<section class="relative min-h-[30rem] p-4">
+	<!-- our clients -->
+	<section class="relative mt-10 min-h-[20rem] p-4">
 		<h1 class="text-center text-4xl font-bold text-white">Our Clients</h1>
 		<Slider list={fintechCompanies} />
 	</section>
@@ -115,38 +108,7 @@
 		></div>
 
 		<h1 class="text-4xl font-bold text-white">Conect with us</h1>
-		<form onsubmit={handleSubmit} class="flex flex-col gap-4">
-			<label for="name" class="text-2xl">Name</label>
-			<input
-				type="text"
-				name="name"
-				id="name"
-				bind:value={userForm.name}
-				placeholder="Name"
-				class="rounded-lg border-2 p-2"
-			/>
-			<label for="email" class="text-2xl">Email</label>
-			<input
-				type="email"
-				name="email"
-				id="email"
-				bind:value={userForm.email}
-				placeholder="Email"
-				class="rounded-lg border-2 p-2"
-			/>
-			<label for="message" class="text-2xl">Message</label>
-			<textarea
-				class="rounded-lg border-2 p-2"
-				name="message"
-				id="message"
-				bind:value={userForm.message}
-			></textarea>
-			<button
-				disabled={!userForm.name || !userForm.email}
-				type="submit"
-				class="rounded-lg bg-orange-500 p-4 font-bold text-white">Submit Inquiry</button
-			>
-		</form>
+		<Form onSubmit={handleSubmit} />
 	</section>
 </div>
 
