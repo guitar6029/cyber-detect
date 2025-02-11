@@ -49,7 +49,7 @@
 	let selectedService = $state(services[0]);
 </script>
 
-<div class="relative flex flex-col gap-2 p-4 slide-in">
+<div class="relative min-h-screen flex flex-col gap-2 p-4 slide-in">
 	
 	<div
 			class="absolute top-40 -right-30 z-[-1] h-[10.2rem] w-[10.2rem] rounded-full border-10 border-yellow-500 bg-black opacity-[5%]"

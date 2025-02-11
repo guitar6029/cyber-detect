@@ -15,7 +15,7 @@
 	];
 </script>
 
-<div class="slide-in relative flex flex-col gap-5 p-4">
+<div class="min-h-screen slide-in relative flex flex-col gap-5 p-4">
 	
   <div
 			class="absolute top-40 -right-30 z-[-1] h-[10.2rem] w-[10.2rem] rounded-full border-10 border-yellow-500 bg-black opacity-[5%]"

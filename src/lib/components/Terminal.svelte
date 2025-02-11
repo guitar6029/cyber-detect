@@ -10,7 +10,7 @@
 
 
 <div
-	class="terminal absolute -right-10 z-[-1] h-[25rem] w-[50rem] -skew-x-2 rounded-md border-2 border-neutral-200 bg-black text-white opacity-50 shadow-lg shadow-orange-500"
+	class="terminal absolute -right-60 z-[-1] h-[25rem] w-[50rem] -skew-x-2 rounded-md border-2 border-neutral-200 bg-black text-white opacity-50 shadow-lg shadow-orange-500"
 >
 	<div class="h-[.9rem] w-[100%] bg-neutral-900"></div>
 	<div class="h-[90%] rounded-lg p-4">
@@ -27,7 +27,7 @@
 
 <style lang="postcss">
 	@import 'src/global.css';
-	@media screen and (max-width: 760px) {
+	@media screen and (max-width: 960px) {
 		.terminal {
 			display: none;
 		}
