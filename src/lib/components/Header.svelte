@@ -1,14 +1,22 @@
 <script lang="ts">
-    import logo from '$lib/assets/security.jpg';
-
+	import logo from '$lib/assets/security.jpg';
 </script>
 
-<div class="flex flex-row p-3 items-center gap-4 bg-neutral-900 sticky top-0 z-10">
-    <!-- logo -->
-    <img src={logo} alt="Cyber Detect Logo" class="w-10 h-10 rounded-full hover:border-3 border-orange-500 transiiton duration-300 ease-in-out" />
-
-    <a  class="p-2 hover:bg-neutral-600 hover:text-white transition duration-300 ease-in-out" href="/">Home</a>
-    <a class="p-2 hover:bg-neutral-600 hover:text-white transition duration-300 ease-in-out" href="/services">Services</a>
-    <a class="p-2 hover:bg-neutral-600 hover:text-white transition duration-300 ease-in-out" href="/about">About</a>
-
+<div class="sticky top-0 z-10 flex flex-row items-center gap-4 bg-neutral-900 p-3">
+	<img
+		src={logo}
+		alt="Cyber Detect Logo"
+		class="transiiton h-10 w-10 rounded-full border-orange-500 duration-300 ease-in-out hover:border-3"
+	/>
+	<a class="p-2 transition duration-300 ease-in-out hover:bg-neutral-600 hover:text-white" href="/"
+		>Home</a
+	>
+	<a
+		class="p-2 transition duration-300 ease-in-out hover:bg-neutral-600 hover:text-white"
+		href="/services">Services</a
+	>
+	<a
+		class="p-2 transition duration-300 ease-in-out hover:bg-neutral-600 hover:text-white"
+		href="/about">About</a
+	>
 </div>

@@ -1,20 +1,14 @@
 export function intersect(node: HTMLElement, options: IntersectionObserverInit) {
-    const observer = new IntersectionObserver((entries) => {
-       entries.forEach(entry => {
-          if (entry.isIntersecting) {
-             node.classList.add('slide-in');
-             node.dispatchEvent(new CustomEvent('intersect'));
-             observer.unobserve(node); // Stop observing once it intersects
-          }
-       });
-    }, options);
+   const observer = new IntersectionObserver(([entry]) => {
+     node.dispatchEvent(new CustomEvent("intersect", { detail: entry }));
+   }, options);
  
-    observer.observe(node);
+   observer.observe(node);
  
-    return {
-       destroy() {
-          observer.unobserve(node);
-       }
-    };
+   return {
+     destroy() {
+       observer.unobserve(node);
+     }
+   };
  }
  

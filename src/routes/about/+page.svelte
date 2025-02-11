@@ -24,7 +24,10 @@
     <p>At Cyber Detect, we protect your digital assets from evolving cyber threats. Our expert team is dedicated to providing cutting-edge solutions and fast response times to keep you secure.</p>
     <ul class="list-disc list-inside">
         {#each commitment as { keyPoint, description}}
-        <li>{keyPoint}: {description}</li>
+        <li class="flex flex-col gap-3 mt-1 mb-1">
+          <span class='font-bold lg:text-2xl'>{keyPoint} </span>
+          <span class="lg:text-xl">{description}</span>
+        </li>
         {/each}
     </ul>
 </div>

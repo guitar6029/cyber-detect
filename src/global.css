@@ -1,14 +1,26 @@
 .slide-in {
-    animation: slide-in 1s ease-in-out .1s;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slide-in 1s ease-in-out 0.1s forwards;
 }
 
 @keyframes slide-in {
-    0% {
-        opacity: 0;
-        transform: translateY(-100%);
-    }
     100% {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateX(0);
     }
+}
+
+
+@keyframes slide-in-from-right {
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-from-right{
+    opacity: 0;
+    transform: translateX(200%);
+    animation: slide-in-from-right 1s ease-in-out 0.1s forwards;
 }
