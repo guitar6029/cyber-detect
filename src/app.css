@@ -1,0 +1,12 @@
+@import 'tailwindcss';
+
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #080808;
+    color: rgb(138, 131, 131);
+}
+body{
+    overflow-x: hidden;
+}
