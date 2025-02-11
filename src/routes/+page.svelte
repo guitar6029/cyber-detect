@@ -1,10 +1,24 @@
 <script lang="ts">
 	import { LockKeyholeOpen, ShieldCheck, Cable, Focus } from 'lucide-svelte';
+	import Slider from '$lib/components/Slider.svelte';
 	let userForm: { name: string; email: string; message: string } = $state({
 		name: '',
 		email: '',
 		message: ''
 	});
+
+	const fintechCompanies: String[] = [
+		'QuantumPay Solutions',
+		'NeuralNet Finance',
+		'HoloWealth Inc.',
+		'CipherBank Global',
+		'StellarFunds Tech',
+		'CrypticLedger Systems',
+		'ZeroGravity Investments',
+		'PrismCash Networks',
+		'AetherCard Technologies',
+		'NanoPay Innovations'
+	];
 
 	const reasons = [
 		{
@@ -71,18 +85,21 @@
 				<div
 					class="group flex flex-row items-center justify-center gap-4 rounded-lg bg-neutral-900 p-5 transition duration-300 ease-in-out hover:bg-neutral-700 sm:w-[100%] lg:h-[10rem] lg:w-[35rem]"
 				>
-					<reason.icon size="5rem" class="text-white group-hover:scale-105 transition duration-300 ease-in" />
+					<reason.icon
+						size="5rem"
+						class="text-white transition duration-300 ease-in group-hover:scale-105"
+					/>
 					<span class="flex-1 text-white sm:text-sm">{reason.name}</span>
 				</div>
 			{/each}
 		</div>
 	</section>
 
-
 	<!-- our sponsors -->
-	 <section class=" relative flex min-h-[30rem] flex-col items-center justify-center gap-2 p-4">
-		<h1 class="text-4xl font-bold text-white">Our Sponsors</h1>
-	 </section>
+	<section class="relative min-h-[30rem] p-4">
+		<h1 class="text-center text-4xl font-bold text-white">Our Clients</h1>
+		<Slider list={fintechCompanies} />
+	</section>
 
 	<!-- form -->
 	<section class=" relative flex min-h-[30rem] flex-col items-center justify-center gap-2 p-4">
