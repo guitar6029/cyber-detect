@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { LockKeyholeOpen, ShieldCheck, Cable, Focus } from 'lucide-svelte';
 	import Slider from '$lib/components/Slider.svelte';
+	import Terminal from '$lib/components/Terminal.svelte';
 	import Form from '$lib/components/Form.svelte';
 
 	const fintechCompanies: String[] = [
@@ -35,9 +36,7 @@
 		}
 	];
 
-	const handleSubmit = (formDetails: { name: string; email: string; message: string }) => {
-		
-	};
+	const handleSubmit = (formDetails: { name: string; email: string; message: string }) => {};
 </script>
 
 <div class="flex min-h-screen flex-col gap-3 p-4">
@@ -53,7 +52,7 @@
 		<div class="flex flex-col gap-[0.75rem] text-6xl text-white">
 			<span>Welcome</span><span>to</span><span class="font-bold text-orange-500">Cyber Detect</span>
 		</div>
-		<p>
+		<p class="text-white">
 			At Cyber Detect, we specialize in safeguarding your business against the ever-evolving
 			landscape of cyber threats. Our team of seasoned experts utilizes advanced tools and
 			methodologies to ensure that your digital assets remain secure.
@@ -62,6 +61,8 @@
 			class="w-[10rem] cursor-pointer rounded-lg bg-orange-500 p-4 text-white transition duration-300 ease-in-out hover:bg-orange-400"
 			><a href="/services">Learn More</a></button
 		>
+
+		<Terminal />
 	</section>
 
 	<!-- why choose us -->
@@ -114,4 +115,5 @@
 
 <style lang="postcss">
 	@import 'src/global.css';
+	
 </style>
