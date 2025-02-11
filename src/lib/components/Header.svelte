@@ -15,6 +15,9 @@
 		class="p-2 transition duration-300 ease-in-out hover:bg-neutral-600 hover:text-white"
 		href="/services">Services</a
 	>
+
+	<a href="/team" class="p-2 transition duration-300 ease-in-out hover:bg-neutral-600 hover:text-white">Team</a>
+
 	<a
 		class="p-2 transition duration-300 ease-in-out hover:bg-neutral-600 hover:text-white"
 		href="/about">About</a
