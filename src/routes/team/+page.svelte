@@ -24,7 +24,7 @@
     <div class="flex sm:flex-col lg:flex-row flex-wrap gap-5 items-center">
         {#each team as teamMember, index}
             <div style="animation-delay: {index * 0.3}s;" class="fade-in sm:h-fit sm:w-[50vw]  lg:h-[15rem] lg:w-[25rem]  flex flex-col items-center justify-center rounded-lg gap-5 p-4 border-2 border-neutral-900 shadow-lg shadow-neutral-800">
-                <img src="{teamMember.photo}" alt={teamMember.name} use:lazyload class="h-25 w-25 border-2 border-neutral-100 rounded-full">
+                <img src="{teamMember.photo}" alt={teamMember.name} use:lazyload class="h-25 w-25 border-2 border-orange-500 rounded-full">
                 <span class="font-bold text-2xl text-white">{teamMember.name}</span>
                 <span class="italic">{teamMember.position}</span>
             </div>
