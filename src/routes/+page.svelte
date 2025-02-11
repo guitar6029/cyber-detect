@@ -36,7 +36,7 @@
 	];
 
 	const handleSubmit = (formDetails: { name: string; email: string; message: string }) => {
-		console.log('form details ::::', formDetails);
+		
 	};
 </script>
 
