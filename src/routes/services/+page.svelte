@@ -50,6 +50,19 @@
 </script>
 
 <div class="relative flex flex-col gap-2 p-4 slide-in">
+	
+	<div
+			class="absolute top-40 -right-30 z-[-1] h-[10.2rem] w-[10.2rem] rounded-full border-10 border-yellow-500 bg-black opacity-[5%]"
+		></div>
+		<div
+			class="absolute top-20 -right-50 z-[-2] h-[20.2rem] w-[20.2rem] rounded-full border-10 border-yellow-500 bg-black opacity-[5%]"
+		></div>
+
+		<div
+			class="absolute top-0 -right-70 z-[-3] h-[30.2rem] w-[30.2rem] rounded-full border-10 border-yellow-500 bg-black opacity-[5%]"
+		></div>
+
+	
 	<h1 class="text-4xl text-white font-bold">Our Services</h1>
 	<div class="grid xl:grid-cols-2 sm:grid-cols-1 gap-3">
 		<div class="col-span-1 flex flex-col items-start gap-3">
