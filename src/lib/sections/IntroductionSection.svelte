@@ -14,7 +14,7 @@
 		<span>Welcome</span><span>to</span>
 		<span class="font-bold text-orange-500">Cyber Detect</span>
 	</div>
-	<p class="text-white">
+	<p class="text-white sm:text-xl lg:text-2xl">
 		At Cyber Detect, we specialize in safeguarding your business against the ever-evolving landscape
 		of cyber threats. Our team of seasoned experts utilizes advanced tools and methodologies to
 		ensure that your digital assets remain secure.
