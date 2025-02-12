@@ -11,7 +11,8 @@
 		class="absolute top-10 -left-50 z-[-1] h-[30.2rem] w-[30.2rem] rounded-full border-10 border-yellow-500 bg-black opacity-[5%]"
 	></div>
 	<div class="flex flex-col gap-[0.75rem] text-2xl text-white md:text-5xl lg:text-8xl">
-		<span>Welcome</span><span>to</span><span class="font-bold text-orange-500">Cyber Detect</span>
+		<span>Welcome</span><span>to</span>
+		<span class="font-bold text-orange-500">Cyber Detect</span>
 	</div>
 	<p class="text-white">
 		At Cyber Detect, we specialize in safeguarding your business against the ever-evolving landscape
@@ -24,7 +25,6 @@
 	>
 	<Terminal />
 </section>
-
 
 <style lang="postcss">
 	@import 'src/global.css';
