@@ -52,7 +52,7 @@
 	}
 
 	.scroll-text span {
-		border-radius: 50px;
+		border-radius: 5px;
 		padding: 1rem 2.5rem;
 	}
 

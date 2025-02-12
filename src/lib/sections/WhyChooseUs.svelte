@@ -23,3 +23,9 @@
         {/each}
     </div>
 </section>
+
+
+<style lang="postcss">
+	@import 'src/global.css';
+</style>
+
