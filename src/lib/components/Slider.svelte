@@ -48,7 +48,7 @@
 		display: flex;
 		gap: 1rem;
 		width: max-content;
-		animation: move-text 30s linear infinite;
+		animation: move-text 70s linear infinite;
 	}
 
 	.scroll-text span {
