@@ -26,7 +26,7 @@
         let counter = 0;
         const intervalId = setInterval(() => {
             if (counter < maxCount) {
-                state.value += increment; // ✅ Now updates correctly
+                state.value += increment;
                 counter += increment;
             } else {
                 clearInterval(intervalId);
