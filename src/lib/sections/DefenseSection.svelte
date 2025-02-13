@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { intersect } from '$lib/actions/intersect';
-	import { writable } from 'svelte/store';
+	import { writable} from 'svelte/store';
+	import type { Writable  } from 'svelte/store';
 
 	// Reactive store for visibility
 	let intersection = writable(false);
@@ -16,14 +17,14 @@
 	}
 
 	// Example state for attack data (writable stores)
-	let dailyZeroAttacks = $state(12480);
-	let totalAttacksPrevented = $state(1045230);
-	let currentActiveThreats = $state(528);
+	let dailyZeroAttacks = writable(12480);
+	let totalAttacksPrevented = writable(1045230);
+	let currentActiveThreats = writable(528);
 
 	let attacksInfo = [
-		{ title: 'Daily Zero-Day Attacks Prevented', value: dailyZeroAttacks },
-		{ title: 'Total Attacks Prevented', value: totalAttacksPrevented },
-		{ title: 'Current Active Threats Under Surveillance', value: currentActiveThreats }
+		{ title: 'Daily Zero-Day Attacks Prevented', value: $dailyZeroAttacks },
+		{ title: 'Total Attacks Prevented', value: $totalAttacksPrevented },
+		{ title: 'Current Active Threats Under Surveillance', value: $currentActiveThreats }
 	];
 
 	// Increment counters
@@ -33,7 +34,7 @@
 	});
 
 	const incrementCounter = (
-		state: number,
+		state: Writable<number>,
 		increment: number,
 		maxCount: number,
 		interval = 1000
@@ -41,7 +42,7 @@
 		let counter = 0;
 		const intervalId = setInterval(() => {
 			if (counter < maxCount) {
-				state += increment;
+				state.update( (value : number) => value + increment);
 				counter += increment;
 			} else {
 				clearInterval(intervalId);
@@ -75,19 +76,20 @@
 	></div>
 
 	<div class="flex flex-col">
-		<div class="flex flex-col gap-10">
-			{#each attacksInfo as info}
-				<div class="flex flex-col gap-2">
-					<h1 class="font-bold text-wrap text-white sm:text-xl lg:text-4xl">
-						{info.title}
-					</h1>
-					<h1 class="font-bold text-gray-400 sm:text-2xl lg:text-6xl">
-						{info.value.toLocaleString()}
-					</h1>
-				</div>
-			{/each}
-		</div>
-	</div>
+        <div class="flex flex-col gap-10">
+          {#each attacksInfo as info}
+            <div class="flex flex-col gap-2">
+              <h1 class="font-bold text-wrap text-white sm:text-xl lg:text-4xl">
+                {info.title}
+              </h1>
+              <h1 class="font-bold text-gray-400 sm:text-2xl lg:text-6xl">
+                <!-- Use $ to get the store value reactively -->
+                {info.value.toLocaleString()} <!-- This will reactively display the store value -->
+              </h1>
+            </div>
+          {/each}
+        </div>
+      </div>
 </section>
 
 <style>
