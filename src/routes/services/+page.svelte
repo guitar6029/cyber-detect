@@ -49,6 +49,11 @@
 	let selectedService = $state(services[0]);
 </script>
 
+<svelte:head>
+    <title>Services | CyberDetect </title>
+</svelte:head>
+
+
 <div class="relative min-h-screen flex flex-col gap-2 p-4 slide-in">
 	
 	<div

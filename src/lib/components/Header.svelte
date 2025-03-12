@@ -50,9 +50,7 @@
 			dropdownContainerRef.classList.remove('slide-in-from-right');
 			dropdownContainerRef.classList.add('slide-out-to-right');
 			isAnimating = true;
-		} else {
-			console.log('something else');
-		}
+		} 
 
 		setTimeout(() => {
 			if (dropdownContainerRef) {

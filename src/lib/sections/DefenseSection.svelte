@@ -11,7 +11,6 @@
 	function setup(node: HTMLElement) {
 		const { isVisible } = intersect(node); // Access the visibility state from the observer
 		isVisible.subscribe((value) => {
-			console.log('Visibility changed:', value);
 			intersection.set(value); // Update the store whenever visibility changes
 		});
 	}

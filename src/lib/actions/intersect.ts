@@ -6,7 +6,6 @@ export function intersect(node: HTMLElement, options: IntersectionObserverInit =
 
   // Initialize the Intersection Observer
   const observer = new IntersectionObserver(([entry]) => {
-    console.log(entry.isIntersecting); // Debugging line
     isVisible.set(entry.isIntersecting); // Update the store value when visibility changes
   }, options);
 

@@ -8,6 +8,11 @@
 	
 </script>
 
+<svelte:head>
+    <title>Home | CyberDetect </title>
+</svelte:head>
+
+
 <div class="flex min-h-screen flex-col gap-3 p-4">
 	<IntoductionSection />
 	<DefenseSection />

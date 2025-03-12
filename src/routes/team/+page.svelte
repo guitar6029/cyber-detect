@@ -18,6 +18,9 @@
 
 </script>
 
+<svelte:head>
+    <title>Team | CyberDetect </title>
+</svelte:head>
 
 <div class="flex min-h-screen flex-col gap-3 p-4">
     <h1 class="text-4xl text-white font-bold">Team</h1>

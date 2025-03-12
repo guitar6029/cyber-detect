@@ -15,6 +15,11 @@
 	];
 </script>
 
+<svelte:head>
+    <title>About | CyberDetect </title>
+</svelte:head>
+
+
 <div class="min-h-screen slide-in relative flex flex-col gap-5 p-4">
 	
   <div
